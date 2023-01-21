@@ -58,10 +58,8 @@ async(req,res)=>{
     const authToken = jwt.sign(data,JWT)
     res.send({authToken})
   } catch (error) {
-    res.status(500).send("Internal server Error")
+    res.status(500).send("Internal sedrver Error")
   }
-
 }
 )
-
 module.exports= Router
