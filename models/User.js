@@ -18,6 +18,19 @@ const UserSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
-    }
+    },
+
+    AcceptedRequests:[{
+        EventID:{type:Schema.Types.ObjectId, ref: "event"},
+    }],
+    
+    sentRequests:[{
+        EventID:{type:Schema.Types.ObjectId, ref: "event"},
+    }],
+    createdEvents:[{
+        EventID:{
+            type:Schema.Types.ObjectId, ref: "event"
+        }
+    }]
 })
 module.exports= mongoose.model('user',UserSchema)
