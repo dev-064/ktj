@@ -5,7 +5,6 @@ var jwt = require('jsonwebtoken');
 const Router=express.Router()
 const { body, validationResult } = require('express-validator');
 const JWT= "Login@userToken"
-
 //creating user
 Router.post('/createUser',
 [ body('name','Name length should be greater than 2').isLength({min:3}),
